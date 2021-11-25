@@ -29,7 +29,7 @@ module.exports = {
 	},
 	{source: "file"}
       ],
-      ie_distribution: "https://yet-another-ie-url.cdn.imgeng.in/"
+      ie_distribution: "https://881qcim2.cdn.imgeng.in/"
     }
   }
   ],
