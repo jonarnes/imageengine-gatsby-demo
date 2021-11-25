@@ -15,5 +15,22 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+    resolve: "@imageengine/gatsby-plugin-imageengine",
+    options: {
+      sources: [
+        {
+	  source: "contentful",
+	  ie_distribution: "https://some-ie-url.cdn.imgeng.in/"
+	},
+	{
+	  source: "sanityio",
+	  ie_distribution: "https://another-ie-url.cdn.imgeng.in/"
+	},
+	{source: "file"}
+      ],
+      ie_distribution: "https://yet-another-ie-url.cdn.imgeng.in/"
+    }
+  }
   ],
 };
