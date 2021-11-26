@@ -5,10 +5,20 @@ import { graphql } from "gatsby"
 export default function IndexPage({ data }) {
   console.log("data: ", data)
   return (
+    <div>
+    <p>childImageSharp
     <GatsbyImage
-      image={data.file.childImageEngineAsset.gatsbyImageData}
+      image={data.sharp.childImageSharp.gatsbyImageData}
       alt="icon"
     />
+    </p>
+    <p>childImageEngineAsset
+    <GatsbyImage
+      image={data.ie.childImageEngineAsset.gatsbyImageData}
+      alt="icon"
+    />
+    </p>
+    </div>
   )
 }
 /*
@@ -26,11 +36,14 @@ export const query = graphql`
 
 export const query = graphql`
   query {
-    file(name: {eq: "icon"}) {
+    sharp: file(name: {eq: "icon"}) {
+      childImageSharp {
+        gatsbyImageData(width: 500, height: 300, formats: [WEBP,AVIF])
+      }
+    },
+    ie: file(name: {eq: "icon"}) {
       childImageEngineAsset {
-        url(width: 500, height: 300, compression: 10)
         gatsbyImageData(width: 500, height: 300)
-
       }
     }
 }
