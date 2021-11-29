@@ -38,7 +38,7 @@ export const query = graphql`
   query {
     sharp: file(name: {eq: "icon"}) {
       childImageSharp {
-        gatsbyImageData(width: 500, height: 300, formats: [WEBP,AVIF])
+        gatsbyImageData(width: 500, height: 300)
       }
     },
     ie: file(name: {eq: "icon"}) {
