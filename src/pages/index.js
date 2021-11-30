@@ -43,7 +43,7 @@ export const query = graphql`
     },
     ie: file(name: {eq: "icon"}) {
       childImageEngineAsset {
-        gatsbyImageData(height: 200,width:100)
+        gatsbyImageData(height: 200,width:100,fit: cropbox)
       }
     }
 }
