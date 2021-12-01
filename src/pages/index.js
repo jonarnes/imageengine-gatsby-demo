@@ -10,13 +10,13 @@ export default function IndexPage({ data }) {
     <p>childImageSharp
     <GatsbyImage
       image={data.sharp.childImageSharp.gatsbyImageData}
-      alt="icon"
+      alt="childImageSharp"
     />
     </p>
     <p>childImageEngineAsset
     <GatsbyImage
       image={data.ie.childImageEngineAsset.gatsbyImageData}
-      alt="icon"
+      alt="childImageEngineAsset"
     />
     </p>
     <p>gatsby-image
@@ -24,14 +24,14 @@ export default function IndexPage({ data }) {
       fixed={data.img.childImageSharp.fixed}
       objectFit="cover"
       objectPosition="50% 50%"
-      alt=""
+      alt="gatsby-image"
 
     />
     </p>
     <p>sanity
     <GatsbyImage
       image={data.sanity.edges[0].node.childImageEngineAsset.gatsbyImageData}
-      alt=""
+      alt="sanity"
     />
     </p>
 
@@ -50,17 +50,16 @@ export const query = graphql`
 `
 */
 
-
 export const query = graphql`
   query {
     sharp: file(name: {eq: "icon"}) {
       childImageSharp {
-        gatsbyImageData(height: 200, width:100)
+        gatsbyImageData(height:200, width:100)
       }
     },
     ie: file(name: {eq: "icon"}) {
       childImageEngineAsset {
-        gatsbyImageData(height: 200,width:100)
+        gatsbyImageData(height:200, width:100)
       }
     },
     img: file(name: {eq: "icon"}) {
@@ -76,7 +75,7 @@ export const query = graphql`
       edges {
         node {
           childImageEngineAsset {
-            gatsbyImageData(height: 200,width:100)
+            gatsbyImageData(height: 200,width:100,fit: cropbox)
           }
         }
       }

@@ -56,11 +56,14 @@ module.exports = {
           },
           {
             source: "sanityio",
-            ie_distribution: "https://92aegi3u.cdn.imgeng.in/"
+            ie_distribution: "https://92aegi3u.cdn.imgeng.in/",
           },
           {source: "file"}
         ],
-        ie_distribution: "https://881qcim2.cdn.imgeng.in/"
+        ie_distribution: "https://881qcim2.cdn.imgeng.in/",
+        directives: {
+          fit: "cropbox"
+        }      
       }
     }
   ],
