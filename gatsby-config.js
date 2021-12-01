@@ -52,15 +52,15 @@ module.exports = {
         sources: [
           {
             source: "contentful",
-            ie_distribution: "https://some-ie-url.cdn.imgeng.in/"
+            ie_delivery_address: "https://some-ie-url.cdn.imgeng.in/"
           },
           {
             source: "sanityio",
-            ie_distribution: "https://92aegi3u.cdn.imgeng.in/",
+            ie_delivery_address: "https://92aegi3u.cdn.imgeng.in/",
           },
           {source: "file"}
         ],
-        ie_distribution: "https://881qcim2.cdn.imgeng.in/",
+        ie_delivery_address: "https://881qcim2.cdn.imgeng.in/",
         directives: {
           fit: "cropbox"
         }      
