@@ -75,7 +75,7 @@ export const query = graphql`
       edges {
         node {
           childImageEngineAsset {
-            gatsbyImageData(height: 200,width:100,fit: cropbox)
+            gatsbyImageData(height: 200,width:100)
           }
         }
       }
