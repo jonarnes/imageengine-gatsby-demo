@@ -57,6 +57,10 @@ module.exports = {
           {
             source: "sanityio",
             ie_delivery_address: "https://92aegi3u.cdn.imgeng.in/",
+            directives: {
+              compression: "10"
+           }
+    
           },
           {source: "file"}
         ],

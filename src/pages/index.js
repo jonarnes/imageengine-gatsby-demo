@@ -34,7 +34,12 @@ export default function IndexPage({ data }) {
       alt="sanity"
     />
     </p>
-
+    <p>local
+    <img
+      src={data.ie.childImageEngineAsset.url}
+      alt="local"
+    />
+    </p>
     </div>
   )
 }
@@ -60,6 +65,7 @@ export const query = graphql`
     ie: file(name: {eq: "icon"}) {
       childImageEngineAsset {
         gatsbyImageData(height:200, width:100)
+        url(height:200, width:100)
       }
     },
     img: file(name: {eq: "icon"}) {
