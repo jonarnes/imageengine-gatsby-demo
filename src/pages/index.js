@@ -13,10 +13,10 @@ export default function IndexPage({ data }) {
       alt="childImageSharp"
     />
     </p>
-    <p>childImageEngineAsset
+    <p>
     <GatsbyImage
       image={data.ie.childImageEngineAsset.gatsbyImageData}
-      alt="childImageEngineAsset"
+      alt="image"
     />
     </p>
     <p>gatsby-image
